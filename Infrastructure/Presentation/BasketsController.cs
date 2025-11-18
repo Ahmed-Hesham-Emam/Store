@@ -29,7 +29,7 @@ namespace Presentation
         public async Task<IActionResult> GetBasketById(string id)
             {
 
-            var basket = await serviceManager.BasketService.GetBasketAsync(id);
+            var basket = await serviceManager.BasketService.GetCustomerBasketAsync(id);
 
             return Ok(basket);
             }

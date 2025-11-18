@@ -27,7 +27,7 @@ namespace Services
 
         {
         public IProductService ProductService { get; } = new ProductService(unitOfWork, mapper);
-        public IBasketService BasketService { get; } = new BasketService(basketRepository, mapper);
+        public IBasketService BasketService { get; } = new BasketService(basketRepository, mapper, unitOfWork);
 
         public ICacheService CacheService { get; } = new CacheService(cacheRepository);
 
